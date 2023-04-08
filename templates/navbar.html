@@ -1,0 +1,60 @@
+{% load static %}
+<section class="bg-nav fixed-top">
+  <nav class="navbar navbar-expand-lg rounded ">
+    <div class="container-fluid">
+      <nav class="navbar">
+        <div class="container">
+          <a class="navbar-brand" href="{% url 'home' %}">
+            <img src="{% static 'images/logo3.svg' %}" alt="Logo" width="40" height="40">
+          </a>
+        </div>
+      </nav>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active text-white" aria-current="page" href="#"
+              >Home</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">Tasks</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">Payments</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">Coins {{request.user.coins.first.coins}}</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <div class="dropdown">
+            <button
+              class="btn dropdown-toggle text-white"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Welcome @{{ request.user.username }}!
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">My Profile</a></li>
+              <li class="dropdown-item">Coins: {{request.user.coins.first.coins}}</li>
+              <li><a class="dropdown-item" href="{% url 'logoutPage' %}">Logout</a></li>
+            </ul>
+          </div>
+        </form>
+      </div>
+    </div>
+  </nav>
+  </section>

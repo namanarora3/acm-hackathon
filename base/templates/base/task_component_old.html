@@ -1,0 +1,31 @@
+
+<div>
+  {% for task in tasks %}
+  <div>
+  <h4>{{ task.name }}</h4>
+  <div>
+  {{ task.location }} <br>
+  {{ task.category }} <br>
+  {% if task.completed is None %}
+    Completed: No <br>
+  {% else %}
+  Completed: Yes <br>
+  <!-- {{ task.image }}
+  <img src="http://127.0.0.1:8000/media/{{task.image}}" alt="not found"> <br> -->
+  {% endif %}
+  {% if task.approved is False %}
+    Status: Not Approved <br>
+  {% else %}
+    Status: Approved <br>
+  {% endif %}
+  {% if request.user.is_staff %}
+    Assigned to- @{{ task.assigned.username}} <br>
+    <a href="{% url 'taskApprove' task.id %}"><button value="Approve Task">Approve Task</button></a>
+  {% else %}
+    <a href="{% url 'taskImage' task.id %}"><button value="Upload image">upload image</button></a>
+  {% endif %}
+  <hr>
+ </div>
+ </div>
+  {% endfor %}
+ </div>

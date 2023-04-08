@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Approve Task</title>
+    <link rel="stylesheet" href="{% static 'styles/bootstrap.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/approve.css' %}">
+</head>
+
+<body>
+    <div class="task-title">
+        Approve Task!
+    </div>
+
+    <section>
+        <div class="container">
+            <div class="task-form">
+                <form method="POST">
+                    {% csrf_token %}
+                    <div class="form-group d-flex align-items-center justify-content-center">
+                        <img class="image-main" src="http://127.0.0.1:8000/media/{{task.image}}" alt="Task not yet completed">
+                    </div>
+                    <div class="form-group">
+                        <div class="form-check d-flex align-items-center justify-content-center">
+                            {% if task.approved == True %}
+                            <input class="form-check-input" type="checkbox" value=True name="approved" id="flexCheckDefault" checked> 
+                            {% else %}
+                            <input class="form-check-input" type="checkbox" value=True name="approved" id="flexCheckDefault"> 
+                            {% endif %}
+                            <!-- {{ form.as_p }} -->
+                            <label class="form-check-label label" for="flexCheckDefault">
+                              Approve
+                            </label>
+                          </div>
+                          <!-- <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                            <label class="form-check-label" for="flexCheckChecked">
+                              Checked checkbox
+                            </label>
+                          </div> -->
+                    </div>
+                    <div class="col-lg-12 loginbttm d-flex align-items-center justify-content-center">
+                        <div class="col-lg-6 login-btm login-button">
+                            <button type="submit" class="btn btn-outline-primary">
+                                Approve</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script src="/bootstrap-5.2.2-dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>

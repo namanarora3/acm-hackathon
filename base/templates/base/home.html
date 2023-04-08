@@ -1,0 +1,34 @@
+{% extends "main.html" %}
+{% load static %}
+{% block head %}
+<!-- <link rel="stylesheet" href="/clean-up/static/styles/home.css"> -->
+<link rel="stylesheet" href="{% static 'styles/home.css' %}">
+    <title>Dashboard</title>
+    {% endblock %}
+
+    {% block content %}
+    <br />
+    <div class="d-flex">
+      <div class="d-flex m-100">
+        <!-- locations,category -->
+        <nav class="left-box flex-column bg-dark d-inline-block">
+          <h3 class="location">LOCATION</h3>
+          {% include "base/location_component.html" %}
+          <br>
+          <br>
+          <h3 class="location">CATEGORY</h3>
+          {% include "base/Category_component.html" %}
+          <br>
+          {% if request.user.is_staff %}
+  <a href="{% url 'taskForm' %}"><button type="button" class="btn btn-outline-primary text-white">New task</button>
+  </a>
+  {% endif %}
+        </nav>
+      </div>
+      <!-- list of tasks -->
+      <div class="d-flex kush flex-column w-50">
+        {% include "base/Task_component.html" %}
+      </div>
+    </div>
+    <script src="{% static 'js/bootstrap.bundle.js' %}"></script>
+  {% endblock %}

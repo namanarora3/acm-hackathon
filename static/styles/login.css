@@ -1,0 +1,269 @@
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+
+  line-height: 1.5;
+  color: #fff;
+
+  background-color: #ffffff;
+
+  background-image: url(http://127.0.0.1:8000/static/images/background.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.flex-box-4 {
+  display: flex;
+  justify-content: left;
+}
+
+.logo {
+  margin-right: 15px;
+}
+
+.name {
+  margin-top: 10px;
+  font-size: x-large;
+}
+
+.boxes .container {
+  display: flex;
+  justify-content: space-between;
+
+  text-align: center;
+  margin: 8%;
+
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
+}
+
+.box-left {
+  flex: 1;
+  background-image: linear-gradient(to bottom right, #00172d, #00264d);
+
+  color: #fff;
+
+  margin: 0px 0px;
+  padding: 20px 25px;
+  /* border: 1px solid red; */
+}
+
+.box-left h2 {
+  text-align: center;
+  font-size: 60px;
+
+  font-weight: bold;
+  text-shadow: 2px 2px black;
+
+  margin-top: 10px;
+  padding: 20px;
+}
+
+.box-left p {
+  text-align: justify;
+
+  padding: 25px;
+  margin-top: 100px;
+
+  font-style: italic;
+
+  font-size: 35px;
+
+  background-image: linear-gradient(180deg, white, rgb(108, 107, 107));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.box-right {
+  flex: 1;
+
+  color: #000;
+  background: #ffffff;
+
+  margin: 0px 0px;
+  padding: 15px 20px;
+
+  /* border: 1px solid red; */
+}
+
+.login-title {
+  margin-top: 2%;
+  margin-bottom: 5%;
+  font-size: 28px;
+  font-weight: bold;
+
+  text-align: center;
+
+  color: #000000;
+}
+
+.login-form {
+  margin-top: 4%;
+  text-align: left;
+}
+
+.form-group {
+  margin-left: 10%;
+  outline: 0px;
+}
+
+.form-control-label {
+  font-size: 13px;
+  color: #6c6c6c;
+  letter-spacing: 1px;
+
+  text-align: left;
+  margin-left: 3px;
+}
+
+input[type="password"] {
+  background-color: #ffff;
+
+  border: 0px solid #e0effe;
+  border-bottom: 2px solid #e0effe;
+
+  font-weight: normal;
+
+  padding: 5px 0px 5px 0px;
+  padding-right: 10%;
+  margin-top: 0px;
+
+  color: #000;
+}
+
+input[type="email"],
+input[type="text"] {
+  background-color: #ffff;
+
+  border: 0px solid #e0effe;
+  border-bottom: 2px solid #e0effe;
+
+  font-weight: normal;
+
+  padding: 5px 0px 5px 0px;
+  padding-right: 10%;
+  margin-bottom: 10px;
+  margin-top: 0px;
+
+  color: #000;
+}
+
+.form-control:focus {
+  border-color: inherit;
+
+  -webkit-box-shadow: none;
+  box-shadow: none;
+
+  border-bottom: 2px solid #0db8de;
+
+  outline: 0;
+  background-color: white;
+  color: black;
+}
+
+.form-control:hover {
+  border-color: inherit;
+
+  -webkit-box-shadow: none;
+  box-shadow: none;
+
+  border-bottom: 2px solid #0db8de;
+
+  outline: 0;
+  background-color: white;
+  color: black;
+
+  transition: ease, 0.3s;
+}
+
+.loginbttm {
+  text-align: center;
+}
+
+.btn-outline-primary {
+  border-radius: 5px;
+  
+  margin: 25px;
+  margin-top: 35px;
+
+  background-color: #00498d;
+
+  border: 0px solid black;
+  border-radius: 5px;
+
+  letter-spacing: 1px;
+  font-weight: bold;
+  color: #fff;
+
+  padding: 12px 15% 12px 15%;
+  margin-bottom: 10px;
+
+  font-size: 14px;
+}
+
+.btn-outline-primary a{
+  text-decoration: none;
+  color: #fff;
+}
+
+.btn-outline-primary a:hover{
+  text-decoration: none;
+  color: #fff;
+}
+
+.btn-outline-primary a:visited{
+  text-decoration: none;
+  color: #fff;
+}
+
+.form-group :placeholder-shown {
+  font-size: 11px;
+  font-style: italic;
+  letter-spacing: 1px;
+  opacity: 0.5;
+}
+
+.btn-outline-primary:hover {
+  background-color: #00264d;
+  color: #fff;
+  right: 0px;
+
+  transition: ease-in-out, 0.2s;
+}
+
+.login {
+  font-size: 13px;
+  text-align: center;
+
+  margin: 0px;
+  padding: 0px;
+
+  /* color: rgb(44, 43, 43); */
+}
+
+.login a {
+  color: #0db8de;
+  text-decoration: none;
+}
+
+.login a:hover {
+  text-decoration: underline;
+  transition: all 0.3s ease;
+}
+
+.login a:visited {
+  color: #0db8de;
+  text-decoration: none;
+}
+.flex-box-1,
+.flex-box-2,
+.flex-box-3 {
+  display: flex;
+  justify-content: left;
+}

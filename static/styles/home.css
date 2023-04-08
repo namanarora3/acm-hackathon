@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Happy+Monkey&family=Montserrat:wght@600&family=Orbitron:wght@400;800&display=swap');
+body {
+   background-image: url(/Images/background.jpeg);
+   background-image: url(http://127.0.0.1:8000/static/images/background.jpeg);
+   background-repeat: no-repeat; 
+   background-size: cover; 
+   padding-top: 75px;
+   background-attachment: fixed;
+}
+
+.bg-box {
+  background-image: linear-gradient(to top right, #c5e0e0, #edf4f1);
+}
+
+.leftbox-right{
+float: right;
+padding-right: 15px;
+font-weight: bolder;
+}
+
+.completed {
+  float: right;
+}
+
+.logo1 {
+  background-image: linear-gradient(to top right, #00172d, #0e9898);
+}
+
+.task {
+  margin-bottom: 10px;
+}
+
+.bg-nav {
+  background-image: linear-gradient(to top right, #00172d, #00264d);
+}
+
+.kush {
+  margin-left: 20%;
+}
+
+.button {
+  margin-top: 15px;
+  margin-left:5px;
+  margin-right:5px;
+  padding:2px
+}
+.location {
+  font-family: 'Montserrat', sans-serif;
+  /* text-decoration: underline; */
+  margin:auto;
+  padding: 5px;
+  font-size: 20px;
+  color: lightblue;
+}
+.tags {
+  margin:auto;
+  padding: 4px;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.left-box{
+  text-align: left;
+  padding: 20px;
+  
+  margin-left: 120%;
+  background-image: linear-gradient(to top right, #00172d, #00264d);
+  height: 100%;
+  padding: 20px 75% 20px 20%;
+  max-height: 525px;
+  border-radius: 10px;
+}
+
+#completed {
+  font-weight: bold;
+  width: 4px;
+}

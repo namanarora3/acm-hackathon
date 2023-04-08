@@ -1,0 +1,5 @@
+
+  <a href="{% url 'home' %}" class="nav-link text-white tags">All</a>
+{% for category in categories %}
+<a href="{% url 'home' %}?q={{ category.name|urlencode }} " class="nav-link text-white tags">{{ category.name }}</a>
+{% endfor %}

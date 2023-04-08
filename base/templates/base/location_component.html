@@ -1,0 +1,5 @@
+
+  <a href="{% url 'home' %}" class="nav-link text-white tags">All</a>
+{% for location in locations %}
+<a href="{% url 'home' %}?q={{ location.name|urlencode }}" class="nav-link text-white tags">{{ location.name }}</a>
+{% endfor %}

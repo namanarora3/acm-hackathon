@@ -1,0 +1,6 @@
+<div>
+  <a href="{% url 'home' %}">All</a>
+{% for category in categories %}
+<br> <a href="{% url 'home' %}?q={{ category.name|urlencode }}">{{ category.name }}</a>
+{% endfor %}
+</div>

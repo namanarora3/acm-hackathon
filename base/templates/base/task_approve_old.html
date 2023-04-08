@@ -1,0 +1,34 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<h4>{{ task.name }}</h4>
+  <div>
+  {{ task.location }} <br>
+  {{ task.category }} <br>
+  {% if task.completed is None %}
+    Completed: No <br>
+  {% else %}
+  Completed: Yes <br>
+  {% endif %}
+  {% if task.approved is False %}
+    Status: Not Approved <br>
+  {% else %}
+    Status: Approved <br>
+  {% endif %}
+  {% if request.user.is_staff %}
+    Assigned to- @{{ task.assigned.username}} <br>
+  {% endif %}
+  <hr>
+    <div>
+      <h3>Task Image-</h3> <br>
+      <img src="http://127.0.0.1:8000/media/{{task.image}}" alt="not found"> <br>
+    </div>
+    <hr>
+<form action="" method="POST">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Approve</button>
+</form>
+
+{% endblock %}
